@@ -7,7 +7,7 @@ INACCURACY_VALUE = 0.002; # adjust this to change the accuracy of the approximat
 
 
 
-image = cv2.imread(IMAGE_PATH, 1)
+image = cv2.imread(IMAGE_PATH = png, 1)
 img_height = image.shape[0]
 
 edges = cv2.Canny(image, 100, 200)
@@ -28,7 +28,7 @@ def bezier_to_equations(start, c1, c2, end, img_height):
 
 with open("equations.txt", "w") as f:
     for contour in contours:
-        epsilon = INACCURACY_VALUE * cv2.arcLength(contour, True)
+        epsilon = INACCURACY_VALUE = 0.004 * cv2.arcLength(contour, True)
         approx = cv2.approxPolyDP(contour, epsilon, True)
         
         for i in range(len(approx)):
